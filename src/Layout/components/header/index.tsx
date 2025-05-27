@@ -30,8 +30,6 @@ const Header = () => {
               </span>
             </Link>
           </div>
-
-          {/* Navigation links - hidden on small screens */}
           <ul className="hidden md:flex gap-8 text-[#1E40AF] dark:text-white font-semibold text-lg select-none">
             <li>
               <Link to="/" className="hover:text-[#2563EB] transition">
@@ -55,9 +53,7 @@ const Header = () => {
             </li>
           </ul>
 
-          {/* Right side controls */}
           <div className="flex items-center gap-4">
-            {/* Theme toggle */}
             <button onClick={toggleTheme} aria-label="Toggle Theme" className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition">
               {isDark ? (
                 <Sun className="text-[#1E40AF] w-6 h-6" />
@@ -66,7 +62,7 @@ const Header = () => {
               )}
             </button>
 
-            {/* Hamburger menu for mobile */}
+
             <div
               className="block md:hidden cursor-pointer p-2 rounded-md hover:text-[#1E40AF] transition"
               onClick={toggleMenu}
@@ -75,7 +71,6 @@ const Header = () => {
               <Menu className="text-[#1E40AF] w-6 h-6" />
             </div>
 
-            {/* Language selector */}
             <select
               value={lang}
               onChange={(e) => changeLang(e.target.value)}
@@ -87,7 +82,6 @@ const Header = () => {
               <option value="en">En</option>
             </select>
 
-            {/* Login button */}
             <button
               className="relative overflow-hidden px-6 py-2 rounded-xl text-[#1E40AF] border border-[#1E40AF] font-semibold bg-transparent group transition-colors duration-300 cursor-pointer hidden md:block"
               onClick={() => navigate('/login')}
@@ -116,7 +110,6 @@ const Header = () => {
               </span>
             </button>
 
-            {/* Register button */}
             <button
               className="relative overflow-hidden px-6 py-2 rounded-xl text-white bg-[#1E40AF] border border-[#1E40AF] font-semibold group transition-colors duration-300 cursor-pointer hidden md:block"
               onClick={() => navigate('/register')}
